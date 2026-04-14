@@ -56,6 +56,10 @@
   z-index: $zindex-header;
   transition: all 0.3s ease;
 
+  @include mobile {
+    z-index: 20;
+  }
+
   .header-inner {
     display: flex;
     align-items: center;

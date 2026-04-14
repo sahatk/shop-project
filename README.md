@@ -75,3 +75,6 @@ $ npm run sftp
 
 > - cl.csv는 로컬서버가 실행되어야 합니다.
 > - vscode liveServer 또는 http-server 모듈을 사용하면 됩니다.
+
+vercel 배포
+npx vercel --prod --yes
