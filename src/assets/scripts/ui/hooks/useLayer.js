@@ -1,6 +1,9 @@
 function useLayer(type = 'modal') {
   function getVisibleLayer() {
-    const $layerComponents = Array.from(document.querySelector('.layer-wrap').children).filter(($el) => {
+    const $layerWrap = document.querySelector('.layer-wrap, #layer-wrap');
+    if (!$layerWrap) return [];
+
+    const $layerComponents = Array.from($layerWrap.children).filter(($el) => {
       const isModalComponent = $el.classList.contains('component-modal');
       const isDialogComponent = $el.classList.contains('component-dialog');
 

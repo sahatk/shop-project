@@ -15,6 +15,10 @@
     @include mobile {
       flex-direction: column;
       @include rem(margin-top, 16);
+
+      .filter-sidebar {
+        display: none;
+      }
     }
   }
 }
@@ -30,7 +34,8 @@
     @include rem(margin-bottom, 16);
 
     @include mobile {
-      align-items: flex-end;
+      flex-wrap: wrap;
+      @include rem(gap, 8);
     }
 
     .page-tit {
@@ -39,6 +44,7 @@
 
       @include mobile {
         @include f24(700);
+        width: 100%; // Title takes full width on mobile
       }
     }
 
@@ -50,6 +56,8 @@
       color: rgba(0, 0, 0, 0.6);
 
       @include mobile {
+        width: 100%;
+        justify-content: space-between;
         @include f14(400);
       }
 
@@ -57,9 +65,33 @@
         display: flex;
         align-items: center;
         @include rem(gap, 8);
-        
+
+        .btn-filter-mobile {
+          display: none;
+          @include mobile {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include rem(width, 40);
+            @include rem(height, 40);
+            @include rem(border-radius, 62);
+            background-color: #f0f0f0;
+            @include rem(margin-right, 4);
+
+            .ico-filter {
+              @include rem(width, 20);
+              @include rem(height, 20);
+              opacity: 1;
+              background-image: url("pathImages/icon/ico_filter.png");
+            }
+          }
+        }
+
         .sort-tit {
           color: rgba(0, 0, 0, 0.6);
+          @include mobile {
+            display: none; // Hide label on mobile to save space
+          }
         }
       }
     }
@@ -78,12 +110,13 @@
     }
 
     @include mobile {
-      @include rem(gap, 20 16);
+      @include rem(gap, 20 0);
+      justify-content: space-between;
       @include rem(margin-top, 24);
 
       .product-item {
-        flex: 0 0 calc((100% - 16px) / 2) !important;
-        width: calc((100% - 16px) / 2) !important;
+        flex: 0 0 calc((100% - 16px) / 2);
+        width: calc((100% - 16px) / 2);
       }
     }
   }

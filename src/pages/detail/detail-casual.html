@@ -138,6 +138,9 @@
                     <div class="header-info">
                       <p class="count-txt">Showing 1-10 of 100 Products</p>
                       <div class="sort-box">
+                        <button type="button" class="btn-filter-mobile" aria-label="Open Filter">
+                          <i class="ico-filter"></i>
+                        </button>
                         <span class="sort-tit">Sort by:</span>
                         <div class="component-select type-empty">
                           <select class="select-list">
@@ -413,6 +416,110 @@
       </div>
 
       @@include('../include/_footer.html')
+    </div>
+
+    <!-- s : 레이어 영역 -->
+    <div id="layer-wrap" class="layer-wrap">
+      <!-- s : 필터 모달 (모바일 전용 바텀 시트) -->
+      <div id="modal-filter" class="component-modal modal-bottom">
+        <div class="modal-dimm"></div>
+        <div class="modal-container">
+          <div class="modal-header">
+            <h3 class="modal-tit">Filters</h3>
+            <button type="button" class="modal-close" aria-label="Close"></button>
+          </div>
+          <div class="modal-content">
+            <div class="filter-sidebar">
+              <div class="filter-sections component-accordion" data-ui="accordion">
+                <!-- Categories -->
+                <nav class="filter-nav">
+                  <ul class="filter-list">
+                    <li class="filter-item"><a href="#" class="filter-link">T-shirts<i class="ico-arrow-right"></i></a></li>
+                    <li class="filter-item"><a href="#" class="filter-link">Shorts<i class="ico-arrow-right"></i></a></li>
+                    <li class="filter-item"><a href="#" class="filter-link">Shirts<i class="ico-arrow-right"></i></a></li>
+                    <li class="filter-item"><a href="#" class="filter-link">Hoodie<i class="ico-arrow-right"></i></a></li>
+                    <li class="filter-item"><a href="#" class="filter-link">Jeans<i class="ico-arrow-right"></i></a></li>
+                  </ul>
+                </nav>
+
+                <!-- Price -->
+                <div class="accordion-item" data-state="open">
+                  <button type="button" class="collapse-tit">Price</button>
+                  <div class="collapse-content">
+                    <div class="range-slider component-range-slider" data-min="0" data-max="500" data-start-min="50" data-start-max="200" data-unit="$">
+                      <div class="slider-track">
+                        <div class="slider-range"></div>
+                      </div>
+                      <div class="slider-handle"></div>
+                      <div class="slider-handle"></div>
+                    </div>
+                    <div class="range-values">
+                      <span class="value">$50</span>
+                      <span class="value">$200</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Colors -->
+                <div class="accordion-item" data-state="open">
+                  <button type="button" class="collapse-tit">Colors</button>
+                  <div class="collapse-content">
+                    <ul class="color-list component-selector" data-type="color" data-multi-select="true">
+                      <li class="color-item"><button type="button" class="color-btn" style="background-color: #00c853;" aria-label="Green"></button></li>
+                      <li class="color-item"><button type="button" class="color-btn" style="background-color: #ff1744;" aria-label="Red"></button></li>
+                      <li class="color-item"><button type="button" class="color-btn" style="background-color: #ffea00;" aria-label="Yellow"></button></li>
+                      <li class="color-item"><button type="button" class="color-btn" style="background-color: #ff9100;" aria-label="Orange"></button></li>
+                      <li class="color-item"><button type="button" class="color-btn" style="background-color: #00e5ff;" aria-label="Cyan"></button></li>
+                      <li class="color-item"><button type="button" class="color-btn is-active" style="background-color: #2979ff;" aria-label="Blue"><i class="ico-check"></i></button></li>
+                      <li class="color-item"><button type="button" class="color-btn" style="background-color: #aa00ff;" aria-label="Purple"></button></li>
+                      <li class="color-item"><button type="button" class="color-btn" style="background-color: #ff4081;" aria-label="Pink"></button></li>
+                      <li class="color-item"><button type="button" class="color-btn is-white" style="background-color: #ffffff; border-color: #e0e0e0;" aria-label="White"></button></li>
+                      <li class="color-item"><button type="button" class="color-btn" style="background-color: #000000;" aria-label="Black"></button></li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Size -->
+                <div class="accordion-item" data-state="open">
+                  <button type="button" class="collapse-tit">Size</button>
+                  <div class="collapse-content">
+                    <div class="size-list component-selector" data-type="size" data-multi-select="false">
+                      <button type="button" class="size-btn">XX-Small</button>
+                      <button type="button" class="size-btn">X-Small</button>
+                      <button type="button" class="size-btn">Small</button>
+                      <button type="button" class="size-btn">Medium</button>
+                      <button type="button" class="size-btn is-active">Large</button>
+                      <button type="button" class="size-btn">X-Large</button>
+                      <button type="button" class="size-btn">XX-Large</button>
+                      <button type="button" class="size-btn">3X-Large</button>
+                      <button type="button" class="size-btn">4X-Large</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Dress Style -->
+                <div class="accordion-item" data-state="open">
+                  <button type="button" class="collapse-tit">Dress Style</button>
+                  <div class="collapse-content">
+                    <ul class="filter-list">
+                      <li class="filter-item"><a href="#" class="filter-link">Casual<i class="ico-arrow-right"></i></a></li>
+                      <li class="filter-item"><a href="#" class="filter-link">Formal<i class="ico-arrow-right"></i></a></li>
+                      <li class="filter-item"><a href="#" class="filter-link">Party<i class="ico-arrow-right"></i></a></li>
+                      <li class="filter-item"><a href="#" class="filter-link">Gym<i class="ico-arrow-right"></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="filter-footer">
+                <button type="button" id="btn-apply-filter-mobile" class="btn btn-black btn-pill btn-full btn-lg">
+                  <span class="btn-txt">Apply Filter</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="../../assets/scripts/casual-filter.js"></script>
   </body>

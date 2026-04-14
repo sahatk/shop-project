@@ -22,7 +22,7 @@
         @include rem(padding, 0 16);
 
         .product-list.swiper-wrapper {
-          flex-wrap: nowrap !important;
+          flex-wrap: nowrap;
         }
 
         &.related-products-swiper .product-item.swiper-slide {

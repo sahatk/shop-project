@@ -126,7 +126,7 @@
         background-color: rgba(0, 0, 0, 0.1);
 
         @include mobile {
-          display: none !important; // Forced hide
+          display: none;
         }
       }
 
@@ -321,7 +321,7 @@
 
     @include mobile {
       @include rem(height, 190);
-      flex: 0 0 100% !important;
+      flex: 0 0 100%;
     }
 
     &.style-casual,
@@ -428,7 +428,7 @@
       transition: opacity 0.3s;
 
       &::after {
-        display: none !important; // Remove default swiper arrow icons
+        display: none;
       }
 
       &:hover {

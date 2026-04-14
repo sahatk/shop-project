@@ -108,7 +108,7 @@
           content: "";
           position: absolute;
           top: 50%;
-          @include rem(right, -4);
+          @include rem(right, 0);
           transform: translateY(-50%);
           @include rem(width, 16);
           @include rem(height, 16);
@@ -280,5 +280,48 @@
 
   .filter-footer {
     @include rem(margin-top, 8);
+  }
+}
+
+// Reset sidebar layout when inside a bottom sheet modal (Mobile)
+.modal-bottom {
+  &#modal-filter {
+    .modal-container {
+      @include rem(padding, 20 0);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      @include rem(height, auto);
+      @include rem(padding, 0 20);
+      margin: 0; // Removing default bottom margin from modal-header
+      @include rem(padding-bottom, 24);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+      .modal-tit {
+        @include f20(700);
+        color: #000;
+        text-align: left;
+      }
+
+      .modal-close {
+        position: static;
+        @include rem(width, 24);
+        @include rem(height, 24);
+        background: url("pathImages/icon/ico_close_gray01.png") no-repeat center / contain;
+      }
+    }
+  }
+
+  .filter-sidebar {
+    width: 100%;
+    @include rem(padding, 0 20);
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    text-align: left;
   }
 }

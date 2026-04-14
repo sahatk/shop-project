@@ -14,13 +14,38 @@
    */
   function initFilterActions() {
     const $applyBtn = document.getElementById('btn-apply-filter');
-    const $rangeSlider = document.querySelector('.component-range-slider');
-    const $colorSelector = document.querySelector('.color-list.component-selector');
-    const $sizeSelector = document.querySelector('.size-list.component-selector');
+    const $applyBtnMobile = document.getElementById('btn-apply-filter-mobile');
+    const $filterTriggerMobile = document.querySelector('.btn-filter-mobile');
+    const $filterModal = document.getElementById('modal-filter');
+    
+    // Initialize Modal
+    let modal;
+    if ($filterModal) {
+      if ($filterModal.ui) {
+        modal = $filterModal.ui;
+      } else if (etUI.components.Modal) {
+        modal = etUI.components.Modal();
+        modal.core.init($filterModal, { type: 'bottom' });
+      }
+    }
 
-    if (!$applyBtn) return;
+    // Mobile Trigger
+    if ($filterTriggerMobile && modal) {
+      $filterTriggerMobile.addEventListener('click', () => {
+        modal.open();
+      });
+    }
 
-    $applyBtn.addEventListener('click', () => {
+    const applyFilter = (isMobile = false) => {
+      const containerSelector = isMobile ? '#modal-filter' : '.filter-sidebar';
+      const $container = document.querySelector(containerSelector);
+      
+      if (!$container) return;
+
+      const $rangeSlider = $container.querySelector('.component-range-slider');
+      const $colorSelector = $container.querySelector('.color-list.component-selector');
+      const $sizeSelector = $container.querySelector('.size-list.component-selector');
+
       const filterState = {
         price: getPriceRange($rangeSlider),
         colors: getSelectedColors($colorSelector),
@@ -29,12 +54,21 @@
 
       console.log('Applying Filters:', filterState);
       
-      // Visual feedback (Alert for demo purposes)
-      alert(`Filters Applied!\nPrice: ${filterState.price.min} - ${filterState.price.max}\nColors: ${filterState.colors.join(', ')}\nSizes: ${filterState.sizes.join(', ')}`);
+      // Visual feedback
+      alert(`Filters Applied (${isMobile ? 'Mobile' : 'Desktop'})!\nPrice: ${filterState.price.min} - ${filterState.price.max}\nColors: ${filterState.colors.join(', ')}\nSizes: ${filterState.sizes.join(', ')}`);
       
-      // Here you would typically trigger an AJAX request to update the product list
-      // updateProductList(filterState);
-    });
+      if (isMobile && modal) {
+        modal.close();
+      }
+    };
+
+    if ($applyBtn) {
+      $applyBtn.addEventListener('click', () => applyFilter(false));
+    }
+
+    if ($applyBtnMobile) {
+      $applyBtnMobile.addEventListener('click', () => applyFilter(true));
+    }
   }
 
   /**

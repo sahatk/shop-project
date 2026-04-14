@@ -116,7 +116,7 @@ function Modal() {
 
   function setupElement() {
     // set id
-    const id = etUI.utils.getRandomUIID(name);
+    const id = $target.id || etUI.utils.getRandomUIID(name);
     const titleId = etUI.utils.getRandomUIID(name + '-tit');
 
     // a11y
