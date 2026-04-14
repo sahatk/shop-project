@@ -38,3 +38,4 @@ src/**/*.map
 /src/assets/js/ui/components/index.cjs
 /src/assets/js/ui/hooks/index.cjs
 /src/assets/js/ui/utils/index.cjs
+.vercel
