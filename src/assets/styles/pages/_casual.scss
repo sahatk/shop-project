@@ -79,8 +79,8 @@
             @include rem(margin-right, 4);
 
             .ico-filter {
-              @include rem(width, 20);
-              @include rem(height, 20);
+              @include rem(width, 40);
+              @include rem(height, 40);
               opacity: 1;
               background-image: url("pathImages/icon/ico_filter.png");
             }

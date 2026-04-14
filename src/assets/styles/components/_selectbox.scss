@@ -250,5 +250,9 @@
       @include rem(background-size, 16 auto);
       pointer-events: none;
     }
+
+    @include mobile {
+      display: none;
+    }
   }
 }
