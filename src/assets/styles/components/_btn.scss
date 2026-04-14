@@ -80,6 +80,23 @@
       @include f16(500);
     }
   }
+
+  // button 스타일 - Black
+  &.btn-black {
+    border-color: #000;
+    background: #000;
+    .btn-txt {
+      color: #fff;
+    }
+    &:focus,
+    &:hover {
+      background: rgba(0, 0, 0, 0.8);
+      border-color: rgba(0, 0, 0, 0.8);
+      .btn-txt {
+        color: #fff;
+      }
+    }
+  }
 }
 
 /* component button Group */

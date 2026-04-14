@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <title>shop - 캐주얼</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link href="../../assets/styles/style.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/scripts/common.ui.plugin.js" data-init></script>
+    <script src="../../assets/scripts/common.ui.js" data-init></script>
+    <script src="../../assets/scripts/common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      @@include('../include/_header.html')
+      <div class="" id="container">
+        <div id="content" role="main">
+          <div class="casual-product-wrap">
+            <div class="content-inner">
+              <nav class="component-breadcrumb" aria-label="Breadcrumb">
+                <div class="breadcrumb-inner">
+                  <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="/" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><span class="breadcrumb-text">Casual</span></li>
+                  </ul>
+                </div>
+              </nav>
+
+              <div class="casual-content-wrap">
+                <!-- s : 필터 영역 -->
+                <aside class="filter-sidebar">
+                  <div class="filter-header">
+                    <h3 class="filter-tit">Filters</h3>
+                    <i class="ico-filter"></i>
+                  </div>
+
+                  <div class="filter-sections component-accordion" data-ui="accordion">
+                    <!-- Categories -->
+                    <nav class="filter-nav">
+                      <ul class="filter-list">
+                        <li class="filter-item"><a href="#" class="filter-link">T-shirts<i class="ico-arrow-right"></i></a></li>
+                        <li class="filter-item"><a href="#" class="filter-link">Shorts<i class="ico-arrow-right"></i></a></li>
+                        <li class="filter-item"><a href="#" class="filter-link">Shirts<i class="ico-arrow-right"></i></a></li>
+                        <li class="filter-item"><a href="#" class="filter-link">Hoodie<i class="ico-arrow-right"></i></a></li>
+                        <li class="filter-item"><a href="#" class="filter-link">Jeans<i class="ico-arrow-right"></i></a></li>
+                      </ul>
+                    </nav>
+
+                    <!-- Price -->
+                    <div class="accordion-item" data-state="open">
+                      <button type="button" class="collapse-tit">Price</button>
+                      <div class="collapse-content">
+                        <div class="range-slider component-range-slider" data-min="0" data-max="500" data-start-min="50" data-start-max="200" data-unit="$">
+                          <div class="slider-track">
+                            <div class="slider-range"></div>
+                          </div>
+                          <div class="slider-handle"></div>
+                          <div class="slider-handle"></div>
+                        </div>
+                        <div class="range-values">
+                          <span class="value">$50</span>
+                          <span class="value">$200</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Colors -->
+                    <div class="accordion-item" data-state="open">
+                      <button type="button" class="collapse-tit">Colors</button>
+                      <div class="collapse-content">
+                        <ul class="color-list component-selector" data-type="color" data-multi-select="true">
+                          <li class="color-item"><button type="button" class="color-btn" style="background-color: #00c853;" aria-label="Green"></button></li>
+                          <li class="color-item"><button type="button" class="color-btn" style="background-color: #ff1744;" aria-label="Red"></button></li>
+                          <li class="color-item"><button type="button" class="color-btn" style="background-color: #ffea00;" aria-label="Yellow"></button></li>
+                          <li class="color-item"><button type="button" class="color-btn" style="background-color: #ff9100;" aria-label="Orange"></button></li>
+                          <li class="color-item"><button type="button" class="color-btn" style="background-color: #00e5ff;" aria-label="Cyan"></button></li>
+                          <li class="color-item"><button type="button" class="color-btn is-active" style="background-color: #2979ff;" aria-label="Blue"><i class="ico-check"></i></button></li>
+                          <li class="color-item"><button type="button" class="color-btn" style="background-color: #aa00ff;" aria-label="Purple"></button></li>
+                          <li class="color-item"><button type="button" class="color-btn" style="background-color: #ff4081;" aria-label="Pink"></button></li>
+                          <li class="color-item"><button type="button" class="color-btn is-white" style="background-color: #ffffff; border-color: #e0e0e0;" aria-label="White"></button></li>
+                          <li class="color-item"><button type="button" class="color-btn" style="background-color: #000000;" aria-label="Black"></button></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- Size -->
+                    <div class="accordion-item" data-state="open">
+                      <button type="button" class="collapse-tit">Size</button>
+                      <div class="collapse-content">
+                        <div class="size-list component-selector" data-type="size" data-multi-select="false">
+                          <button type="button" class="size-btn">XX-Small</button>
+                          <button type="button" class="size-btn">X-Small</button>
+                          <button type="button" class="size-btn">Small</button>
+                          <button type="button" class="size-btn">Medium</button>
+                          <button type="button" class="size-btn is-active">Large</button>
+                          <button type="button" class="size-btn">X-Large</button>
+                          <button type="button" class="size-btn">XX-Large</button>
+                          <button type="button" class="size-btn">3X-Large</button>
+                          <button type="button" class="size-btn">4X-Large</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Dress Style -->
+                    <div class="accordion-item" data-state="open">
+                      <button type="button" class="collapse-tit">Dress Style</button>
+                      <div class="collapse-content">
+                        <ul class="filter-list">
+                          <li class="filter-item"><a href="#" class="filter-link">Casual<i class="ico-arrow-right"></i></a></li>
+                          <li class="filter-item"><a href="#" class="filter-link">Formal<i class="ico-arrow-right"></i></a></li>
+                          <li class="filter-item"><a href="#" class="filter-link">Party<i class="ico-arrow-right"></i></a></li>
+                          <li class="filter-item"><a href="#" class="filter-link">Gym<i class="ico-arrow-right"></i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="filter-footer">
+                    <button type="button" id="btn-apply-filter" class="btn btn-black btn-pill btn-full btn-lg">
+                      <span class="btn-txt">Apply Filter</span>
+                    </button>
+                  </div>
+                </aside>
+                <!-- e : 필터 영역 -->
+
+                <section class="casual-view-section">
+                  <hgroup class="page-tit-group">
+                    <h2 class="page-tit">Casual</h2>
+                    <div class="header-info">
+                      <p class="count-txt">Showing 1-10 of 100 Products</p>
+                      <div class="sort-box">
+                        <span class="sort-tit">Sort by:</span>
+                        <div class="component-select type-empty">
+                          <select class="select-list">
+                            <option value="popular">Most Popular</option>
+                            <option value="newest">Newest</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </hgroup>
+
+                  <div class="product-grid">
+                    <!-- Product 1 -->
+                    <div class="product-item">
+                      <a href="#" class="product-link">
+                        <div class="product-visual">
+                          <img src="../../assets/images/detail/detail_casual_product01.png" alt="Gradient Graphic T-shirt" />
+                        </div>
+                        <div class="product-info">
+                          <h4 class="product-name">Gradient Graphic T-shirt</h4>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star half"></i>
+                              <i class="ico-star"></i>
+                            </div>
+                            <span class="rating-num">3.5/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$145</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="product-item">
+                      <a href="#" class="product-link">
+                        <div class="product-visual">
+                          <img src="../../assets/images/detail/detail_casual_product02.png" alt="Polo with Tipping Details" />
+                        </div>
+                        <div class="product-info">
+                          <h4 class="product-name">Polo with Tipping Details</h4>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star half"></i>
+                            </div>
+                            <span class="rating-num">4.5/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$180</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="product-item">
+                      <a href="#" class="product-link">
+                        <div class="product-visual">
+                          <img src="../../assets/images/detail/detail_casual_product03.png" alt="Black Striped T-shirt" />
+                        </div>
+                        <div class="product-info">
+                          <h4 class="product-name">Black Striped T-shirt</h4>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                            </div>
+                            <span class="rating-num">5.0/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$120</span>
+                            <span class="price-old">$150</span>
+                            <span class="badge-discount">-30%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="product-item">
+                      <a href="#" class="product-link">
+                        <div class="product-visual">
+                          <img src="../../assets/images/detail/detail_casual_product04.png" alt="Skinny Fit Jeans" />
+                        </div>
+                        <div class="product-info">
+                          <h4 class="product-name">Skinny Fit Jeans</h4>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star half"></i>
+                              <i class="ico-star"></i>
+                            </div>
+                            <span class="rating-num">3.5/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$240</span>
+                            <span class="price-old">$260</span>
+                            <span class="badge-discount">-20%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="product-item">
+                      <a href="#" class="product-link">
+                        <div class="product-visual">
+                          <img src="../../assets/images/detail/detail_casual_product05.png" alt="Checkered Shirt" />
+                        </div>
+                        <div class="product-info">
+                          <h4 class="product-name">Checkered Shirt</h4>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star half"></i>
+                            </div>
+                            <span class="rating-num">4.5/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$180</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="product-item">
+                      <a href="#" class="product-link">
+                        <div class="product-visual">
+                          <img src="../../assets/images/detail/detail_casual_product06.png" alt="Sleeve Striped T-shirt" />
+                        </div>
+                        <div class="product-info">
+                          <h4 class="product-name">Sleeve Striped T-shirt</h4>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star half"></i>
+                            </div>
+                            <span class="rating-num">4.5/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$130</span>
+                            <span class="price-old">$160</span>
+                            <span class="badge-discount">-30%</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="product-item">
+                      <a href="#" class="product-link">
+                        <div class="product-visual">
+                          <img src="../../assets/images/detail/detail_casual_product07.png" alt="Vertical Striped Shirt" />
+                        </div>
+                        <div class="product-info">
+                          <h4 class="product-name">Vertical Striped Shirt</h4>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                            </div>
+                            <span class="rating-num">5.0/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$212</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="product-item">
+                      <a href="#" class="product-link">
+                        <div class="product-visual">
+                          <img src="../../assets/images/detail/detail_casual_product08.png" alt="Courage Graphic T-shirt" />
+                        </div>
+                        <div class="product-info">
+                          <h4 class="product-name">Courage Graphic T-shirt</h4>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star"></i>
+                            </div>
+                            <span class="rating-num">4.0/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$145</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="product-item">
+                      <a href="#" class="product-link">
+                        <div class="product-visual">
+                          <img src="../../assets/images/detail/detail_casual_product09.png" alt="Loose Fit Bermuda Shorts" />
+                        </div>
+                        <div class="product-info">
+                          <h4 class="product-name">Loose Fit Bermuda Shorts</h4>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star"></i>
+                              <i class="ico-star"></i>
+                            </div>
+                            <span class="rating-num">3.0/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$80</span>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+
+                  <div class="pagination-wrap">
+                    <nav class="component-pagination" aria-label="Pagination">
+                      <button type="button" class="btn-nav prev">
+                        <i class="ico-arrow"></i>
+                        <span class="btn-txt">Previous</span>
+                      </button>
+                      <ul class="pagination-list">
+                        <li class="pagination-item is-active"><a href="#" class="pagination-link">1</a></li>
+                        <li class="pagination-item"><a href="#" class="pagination-link">2</a></li>
+                        <li class="pagination-item"><a href="#" class="pagination-link">3</a></li>
+                        <li class="pagination-item dots">...</li>
+                        <li class="pagination-item"><a href="#" class="pagination-link">8</a></li>
+                        <li class="pagination-item"><a href="#" class="pagination-link">9</a></li>
+                        <li class="pagination-item"><a href="#" class="pagination-link">10</a></li>
+                      </ul>
+                      <button type="button" class="btn-nav next">
+                        <span class="btn-txt">Next</span>
+                        <i class="ico-arrow"></i>
+                      </button>
+                    </nav>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      @@include('../include/_footer.html')
+    </div>
+    <script src="../../assets/scripts/casual-filter.js"></script>
+  </body>
+</html>

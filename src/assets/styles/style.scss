@@ -5,7 +5,10 @@
 @use "utilities";
 @use "vendors";
 @use "components";
+@use "components/product-card";
 @use "layout";
 @use "themes";
 @use "pages/main";
 @use "pages/sample";
+@use "pages/detail";
+@use "pages/casual";

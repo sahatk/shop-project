@@ -1,0 +1,143 @@
+@use "../abstracts" as *;
+
+/* component product card */
+.product-item {
+  flex: 1;
+  min-width: 0;
+
+  &.swiper-slide {
+    @include mobile {
+      @include rem(width, 200);
+      flex: 0 0 auto;
+    }
+  }
+
+  @include mobile {
+    flex: 0 0 calc(50% - 8px);
+  }
+
+  .product-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+      .product-visual img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .product-visual {
+    width: 100%;
+    @include rem(border-radius, 20);
+    background-color: #f0eeed;
+    overflow: hidden;
+    @include rem(margin-bottom, 16);
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform 0.4s ease;
+    }
+  }
+
+  .product-name {
+    @include f20(700);
+    color: $font-000000;
+    @include rem(margin-bottom, 8);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include mobile {
+      @include f16(700);
+      @include rem(margin-bottom, 4);
+    }
+  }
+
+  .product-rating {
+    display: flex;
+    align-items: center;
+    @include rem(gap, 13);
+    @include rem(margin-bottom, 8);
+
+    @include mobile {
+      @include rem(gap, 11);
+    }
+
+    .stars {
+      display: flex;
+      @include rem(gap, 5);
+
+      .ico-star {
+        display: block;
+        @include rem(width, 18);
+        @include rem(height, 18);
+        background-color: #f0eeed; // Default empty
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+        &.full {
+          background-color: #ffc633;
+        }
+
+        &.half {
+          background: linear-gradient(90deg, #ffc633 50%, #f0eeed 50%);
+        }
+
+        @include mobile {
+          @include rem(width, 15);
+          @include rem(height, 15);
+        }
+      }
+    }
+
+    .rating-num {
+      @include f14(400);
+      color: rgba(0, 0, 0, 0.6);
+
+      @include mobile {
+        @include f12(400);
+      }
+    }
+  }
+
+  .product-price {
+    display: flex;
+    align-items: center;
+    @include rem(gap, 10);
+
+    .price-current {
+      @include f24(700);
+      color: $font-000000;
+
+      @include mobile {
+        @include f20(700);
+      }
+    }
+
+    .price-old {
+      @include f24(700);
+      color: rgba(0, 0, 0, 0.4);
+      text-decoration: line-through;
+
+      @include mobile {
+        @include f20(700);
+      }
+    }
+
+    .badge-discount {
+      display: inline-flex;
+      @include rem(padding, 2 14);
+      @include rem(border-radius, 62);
+      background-color: rgba(255, 51, 51, 0.1);
+      color: #ff3333;
+      @include f12(500);
+    }
+  }
+}

@@ -52,6 +52,7 @@ const projectReplacePaths = {
   pathPagesPrototype: getBuildPath(`pages/prototype`, `pages/prototype`),
   pathPagesSample: getBuildPath(`pages/sample`, `pages/sample`),
   pathPagesMain: getBuildPath(`pages/main`, `pages/main`),
+  pathPagesDetail: getBuildPath(`pages/detail`, `pages/detail`),
   pathPagesCM: getBuildPath(`pages/CM`, `pages/CM`),
   pathPagesQK: getBuildPath(`pages/QK`, `pages/QK`),
   pathPagesMN: getBuildPath(`pages/MN`, `pages/MN`),

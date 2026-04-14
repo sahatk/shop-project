@@ -197,4 +197,58 @@
     }
   }
   /* E : Select-bottomSheet */
+
+  &.type-sort {
+    @include rem(width, 140);
+
+    .select-list {
+      background-color: #f0f0f0;
+      @include rem(border-radius, 62);
+      border: 0;
+      @include rem(height, 48);
+      @include rem(padding, 0 16);
+      @include f16(500);
+      cursor: pointer;
+      width: 100%;
+    }
+
+    &::after {
+      @include rem(right, 16);
+      @include rem(width, 16);
+      @include rem(height, 16);
+      background-image: url("pathImages/icon/ico_arrow_down01.png");
+      @include rem(background-size, 16 auto);
+    }
+  }
+
+  &.type-empty {
+    width: auto;
+
+    .select-list,
+    .select-box {
+      background-color: transparent;
+      border: 0;
+      @include rem(height, 24);
+      @include rem(padding, 0 20 0 0);
+      @include f16(500);
+      color: #000;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+
+      &::-ms-expand {
+        display: none;
+      }
+    }
+
+    &::after {
+      right: 0;
+      @include rem(width, 16);
+      @include rem(height, 16);
+      background-image: url("pathImages/icon/ico_arrow_down01.png");
+      @include rem(background-size, 16 auto);
+      pointer-events: none;
+    }
+  }
 }

@@ -32,18 +32,18 @@
     background-position: 50% 50%;
     @include rem(background-size, 18 18);
   }
-  .first {
-    @include ico-nav-first(black);
-  }
-  .prev {
-    @include ico-nav-prev(black);
-  }
-  .next {
-    @include ico-nav-next(black);
-  }
-  .last {
-    @include ico-nav-last(black);
-  }
+  // .first {
+  //   @include ico-nav-first(black);
+  // }
+  // .prev {
+  //   @include ico-nav-prev(black);
+  // }
+  // .next {
+  //   @include ico-nav-next(black);
+  // }
+  // .last {
+  //   @include ico-nav-last(black);
+  // }
 }
 
 /* component pagination mini */

@@ -3,6 +3,10 @@
 .ico-normal {
   @include icon-size;
 }
+.ico-filter {
+  @include icon-size(24, 24);
+  background-image: url("pathImages/icon/ico_filter_gray.png");
+}
 .ico-close {
   @include ico-x;
 }

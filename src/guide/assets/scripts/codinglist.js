@@ -1128,7 +1128,7 @@ window.onload = function () {
   }
 };
 // 세팅영역
-var mySpreadsheet = `https://docs.google.com/spreadsheets/d/1Pf_L4IgFghdnUk1lUraOUb9Owj_Wn5AY1sU7B3Tdw9s/edit?usp=sharing`; // 구글닥스 경로
+var mySpreadsheet = `https://docs.google.com/spreadsheets/d/1KpMMS-G52JJfuxu6Yhp-438-PuDmGHNvvhduFChvWJw/edit?usp=sharing/edit?gid=0#gid=0`; // 구글닥스 경로
 var csv_local_path = "cl.csv"; // 로컬 CSV 경로
 var uxdevlink = `https://ux.etribe.co.kr/uxdevLinkFolder/`; // uxdev 링크
 var paging = false;
@@ -1198,6 +1198,9 @@ const projectPathsDev = {
   "pathPagesPrototype": "pages/prototype",
   "pathPagesSample": "pages/sample",
   "pathPagesMain": "pages/main",
+  "pathPagesDetail": "pages/detail",
+  "pathPagesLogin": "pages/login",
+  "pathPagesProduct": "pages/product",
   "pathPagesCM": "pages/CM",
   "pathPagesQK": "pages/QK",
   "pathPagesMN": "pages/MN",
@@ -1217,19 +1220,37 @@ const projectPathsBuild = {
   "pathStyles": "assets/styles",
   "pathScripts": "assets/scripts",
   "pathFonts": "assets/fonts",
+  "pathImages": "assets/images",
   "pathGuideStyles": "guide/assets/styles",
   "pathGuideScripts": "guide/assets/scripts",
   "pathGuideImages": "guide/assets/images",
   "pathGuideImagesMailform": "guide/assets/images/mailform",
   "pathGuideImagesIcon": "guide/assets/images/ico",
   "pathGuideComponents": "guide/pages/components",
+  "pathGuideFoundation": "guide/pages/foundation",
+  "pathGuideTemplate": "guide/pages/template",
   "pathGuideComponentsElement": "guide/pages/components/element",
   "pathGuideConvention": "guide/pages/convention",
   "pathGuideMailform": "guide/pages/mailform",
   "pathGuideInclude": "guide/pages/include",
   "pathPagesInclude": "pages/include",
+  "pathPagesPrototype": "pages/prototype",
+  "pathPagesSample": "pages/sample",
   "pathPagesMain": "pages/main",
-  "pathPagesSample": "pages/sample"
+  "pathPagesDetail": "pages/detail",
+  "pathPagesLogin": "pages/login",
+  "pathPagesProduct": "pages/product",
+  "pathPagesCM": "pages/CM",
+  "pathPagesQK": "pages/QK",
+  "pathPagesMN": "pages/MN",
+  "pathPagesML": "pages/ML",
+  "pathPagesMY": "pages/MY",
+  "pathPagesDC": "pages/DC",
+  "pathPagesFG": "pages/FG",
+  "pathPagesPT": "pages/PT",
+  "pathPagesSC": "pages/SC",
+  "pathPagesCS": "pages/CS",
+  "pathPagesFT": "pages/FT"
 };
 // END OF CODINGLIST PATHS BUILD
 

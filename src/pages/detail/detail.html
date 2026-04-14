@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <title>shop - 상세</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link href="../../assets/styles/style.css" type="text/css" rel="stylesheet" />
+    <script src="../../assets/scripts/common.ui.plugin.js" data-init></script>
+    <script src="../../assets/scripts/common.ui.js" data-init></script>
+    <script src="../../assets/scripts/common.js"></script>
+  </head>
+
+  <body>
+    <div id="wrap">
+      @@include('../include/_header.html')
+      <div class="" id="container">
+        <div id="content" role="main">
+          <div class="detail-product-wrap">
+            <div class="content-inner">
+              <nav class="component-breadcrumb" aria-label="Breadcrumb">
+                <div class="breadcrumb-inner">
+                  <ul class="breadcrumb-list">
+                    <li class="breadcrumb-item"><a href="/" class="breadcrumb-link">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Shop</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Men</a></li>
+                    <li class="breadcrumb-item"><span class="breadcrumb-text">T-shirts</span></li>
+                  </ul>
+                </div>
+              </nav>
+              <!-- s : 작업영역 -->
+              <!-- 해당 파일명에 맞춰 div 클래스 작성  -->
+              <section class="detail-product-view">
+                <!-- s: 제품 이미지 갤러리 (탭 형태) -->
+                <div class="product-gallery component-tab">
+                  <div class="gallery-inner">
+                    <!-- thumbnails -->
+                    <div class="tab-head">
+                      <button type="button" class="tab-label" data-tab-value="1" aria-selected="true">
+                        <img src="../../assets/images/detail/detail_product01.png" alt="T-shirt Front View" />
+                      </button>
+                      <button type="button" class="tab-label" data-tab-value="2">
+                        <img src="../../assets/images/detail/detail_product02.png" alt="T-shirt Back View" />
+                      </button>
+                      <button type="button" class="tab-label" data-tab-value="3">
+                        <img src="../../assets/images/detail/detail_product03.png" alt="Model Wearing T-shirt" />
+                      </button>
+                    </div>
+
+                    <!-- main images -->
+                    <div class="tab-body">
+                      <div class="tab-content show" data-tab-value="1">
+                        <img src="../../assets/images/detail/detail_scale_product01.png" alt="T-shirt Front Scale View" />
+                      </div>
+                      <div class="tab-content" data-tab-value="2">
+                        <img src="../../assets/images/detail/detail_scale_product02.png" alt="T-shirt Back Scale View" />
+                      </div>
+                      <div class="tab-content" data-tab-value="3">
+                        <img src="../../assets/images/detail/detail_scale_product03.png" alt="Model Wearing T-shirt Scale View" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- e: 제품 이미지 갤러리 (탭 형태) -->
+
+                <!-- s: 제품 상세 정보 -->
+                <div class="product-info-section">
+                  <h2 class="product-title">ONE LIFE GRAPHIC <br class="mo-br" />T-SHIRT</h2>
+
+                  <div class="product-rating">
+                    <div class="stars">
+                      <i class="ico-star full"></i>
+                      <i class="ico-star full"></i>
+                      <i class="ico-star full"></i>
+                      <i class="ico-star full"></i>
+                      <i class="ico-star half"></i>
+                    </div>
+                    <span class="score-text">4.5/<span class="total">5</span></span>
+                  </div>
+
+                  <div class="product-price">
+                    <span class="price-current">$260</span>
+                    <span class="price-old">$300</span>
+                    <span class="badge-discount">-40%</span>
+                  </div>
+
+                  <p class="product-description"> This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style. </p>
+
+                  <hr class="separator" />
+
+                  <!-- select colors -->
+                  <div class="selection-unit color-selection">
+                    <h3 class="selection-title">Select Colors</h3>
+                    <ul class="color-list">
+                      <li class="color-item">
+                        <button type="button" class="btn-color active" style="background-color: #4f4631" aria-label="Brown" data-color="brown"></button>
+                      </li>
+                      <li class="color-item">
+                        <button type="button" class="btn-color" style="background-color: #314f4a" aria-label="Dark Green" data-color="dark-green"></button>
+                      </li>
+                      <li class="color-item">
+                        <button type="button" class="btn-color" style="background-color: #31344f" aria-label="Dark Navy" data-color="dark-navy"></button>
+                      </li>
+                      <li class="color-item">
+                        <button type="button" class="btn-color is-white" style="background-color: #ffffff; border: 1px solid #e0e0e0;" aria-label="White" data-color="white"></button>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <hr class="separator" />
+
+                  <!-- choose size -->
+                  <div class="selection-unit size-selection">
+                    <h3 class="selection-title">Choose Size</h3>
+                    <ul class="size-list">
+                      <li class="size-item">
+                        <button type="button" class="btn-size" data-size="small">Small</button>
+                      </li>
+                      <li class="size-item">
+                        <button type="button" class="btn-size" data-size="medium">Medium</button>
+                      </li>
+                      <li class="size-item">
+                        <button type="button" class="btn-size active" data-size="large">Large</button>
+                      </li>
+                      <li class="size-item">
+                        <button type="button" class="btn-size" data-size="x-large">X-Large</button>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <hr class="separator" />
+
+                  <!-- actions -->
+                  <div class="action-wrap">
+                    <div class="quantity-stepper">
+                      <button type="button" class="btn-minus" aria-label="Decrease quantity">
+                        <img src="../../assets/images/icon/ico_minus.png" alt="" />
+                      </button>
+                      <input type="number" class="quantity-input" value="1" min="1" readonly />
+                      <button type="button" class="btn-plus" aria-label="Increase quantity">
+                        <img src="../../assets/images/icon/ico_plus.png" alt="" />
+                      </button>
+                    </div>
+                    <button type="button" class="btn btn-primary btn-pill btn-lg btn-add-cart">
+                      <span class="btn-txt">Add to Cart</span>
+                    </button>
+                  </div>
+                </div>
+                <!-- e: 제품 상세 정보 -->
+              </section>
+
+              <!-- s: 제품 상세 탭 (상세 정보 / 리뷰 / FAQ) -->
+              <section class="product-tabs component-tab">
+                <div class="tab-head">
+                  <button type="button" class="tab-label" data-tab-value="1">Product Details</button>
+                  <button type="button" class="tab-label" data-tab-value="2" aria-selected="true">Rating & Reviews</button>
+                  <button type="button" class="tab-label" data-tab-value="3">FAQs</button>
+                </div>
+
+                <div class="tab-body">
+                  <!-- Product Details (Sample) -->
+                  <div class="tab-content" data-tab-value="1">
+                    <div class="content-inner">
+                      <p>Full product specifications and details go here.</p>
+                    </div>
+                  </div>
+
+                  <!-- Rating & Reviews -->
+                  <div class="tab-content show" data-tab-value="2">
+                    <div class="review-content-area">
+                      <div class="review-header">
+                        <div class="title-wrap">
+                          <h3 class="title">All Reviews <span class="count">(451)</span></h3>
+                        </div>
+                        <div class="action-wrap">
+                          <button type="button" class="btn-icon" aria-label="Filter">
+                            <i class="ico-filter"></i>
+                          </button>
+                          <div class="component-select type-sort">
+                            <select class="select-list">
+                              <option value="latest">Latest</option>
+                              <option value="oldest">Oldest</option>
+                              <option value="popular">Most Popular</option>
+                            </select>
+                          </div>
+                          <button type="button" class="btn btn-black btn-pill btn-lg">
+                            <span class="btn-txt">Write a Review</span>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="review-grid">
+                        <!-- Card 1 -->
+                        <div class="component-review-card">
+                          <div class="card-header">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star half"></i>
+                            </div>
+                            <button type="button" class="btn-more" aria-label="More options"><i></i></button>
+                          </div>
+                          <div class="reviewer-info">
+                            <strong class="name">Samantha D.</strong>
+                            <i class="ico-check" title="Verified Customer"></i>
+                          </div>
+                          <p class="review-body"> "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt." </p>
+                          <div class="review-footer">
+                            <time>Posted on August 14, 2023</time>
+                          </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="component-review-card">
+                          <div class="card-header">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                            </div>
+                            <button type="button" class="btn-more" aria-label="More options"><i></i></button>
+                          </div>
+                          <div class="reviewer-info">
+                            <strong class="name">Alex M.</strong>
+                            <i class="ico-check" title="Verified Customer"></i>
+                          </div>
+                          <p class="review-body"> "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me." </p>
+                          <div class="review-footer">
+                            <time>Posted on August 15, 2023</time>
+                          </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="component-review-card">
+                          <div class="card-header">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star half"></i>
+                            </div>
+                            <button type="button" class="btn-more" aria-label="More options"><i></i></button>
+                          </div>
+                          <div class="reviewer-info">
+                            <strong class="name">Ethan R.</strong>
+                            <i class="ico-check" title="Verified Customer"></i>
+                          </div>
+                          <p class="review-body"> "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt." </p>
+                          <div class="review-footer">
+                            <time>Posted on August 16, 2023</time>
+                          </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="component-review-card">
+                          <div class="card-header">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                            </div>
+                            <button type="button" class="btn-more" aria-label="More options"><i></i></button>
+                          </div>
+                          <div class="reviewer-info">
+                            <strong class="name">Olivia P.</strong>
+                            <i class="ico-check" title="Verified Customer"></i>
+                          </div>
+                          <p class="review-body"> "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out." </p>
+                          <div class="review-footer">
+                            <time>Posted on August 17, 2023</time>
+                          </div>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="component-review-card">
+                          <div class="card-header">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                            </div>
+                            <button type="button" class="btn-more" aria-label="More options"><i></i></button>
+                          </div>
+                          <div class="reviewer-info">
+                            <strong class="name">Liam K.</strong>
+                            <i class="ico-check" title="Verified Customer"></i>
+                          </div>
+                          <p class="review-body"> "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion." </p>
+                          <div class="review-footer">
+                            <time>Posted on August 18, 2023</time>
+                          </div>
+                        </div>
+
+                        <!-- Card 6 -->
+                        <div class="component-review-card">
+                          <div class="card-header">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star half"></i>
+                            </div>
+                            <button type="button" class="btn-more" aria-label="More options"><i></i></button>
+                          </div>
+                          <div class="reviewer-info">
+                            <strong class="name">Ava H.</strong>
+                            <i class="ico-check" title="Verified Customer"></i>
+                          </div>
+                          <p class="review-body"> "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter." </p>
+                          <div class="review-footer">
+                            <time>Posted on August 19, 2023</time>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="review-list-footer">
+                        <button type="button" class="btn-load-more">Load More Reviews</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- FAQs (Sample) -->
+                  <div class="tab-content" data-tab-value="3">
+                    <div class="content-inner">
+                      <p>Frequently Asked Questions follow here.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- e: 제품 상세 탭 (상세 정보 / 리뷰 / FAQ) -->
+
+              <!-- s: 관련 상품 영역 -->
+              <section class="section-product">
+                <h2 class="section-title">YOU MIGHT <br class="mo-br" />ALSO LIKE</h2>
+                <div class="component-swiper related-products-swiper" data-props-slides-per-view="auto" data-props-space-between="20">
+                  <div class="swiper-container">
+                    <div class="product-list swiper-wrapper">
+                      <!-- Product 1 -->
+                      <div class="product-item swiper-slide">
+                        <a href="#" class="product-link">
+                          <div class="product-visual">
+                            <img src="pathImages/main/main_product05.png" alt="Polo with Contrast Trims" />
+                          </div>
+                          <h3 class="product-name">Polo with Contrast Trims</h3>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star"></i>
+                            </div>
+                            <span class="rating-num">4.0/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$212</span>
+                            <span class="price-old">$242</span>
+                            <span class="badge-discount">-20%</span>
+                          </div>
+                        </a>
+                      </div>
+
+                      <!-- Product 2 -->
+                      <div class="product-item swiper-slide">
+                        <a href="#" class="product-link">
+                          <div class="product-visual">
+                            <img src="pathImages/main/main_product06.png" alt="Gradient Graphic T-shirt" />
+                          </div>
+                          <h3 class="product-name">Gradient Graphic T-shirt</h3>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star half"></i>
+                              <i class="ico-star"></i>
+                            </div>
+                            <span class="rating-num">3.5/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$145</span>
+                          </div>
+                        </a>
+                      </div>
+
+                      <!-- Product 3 -->
+                      <div class="product-item swiper-slide">
+                        <a href="#" class="product-link">
+                          <div class="product-visual">
+                            <img src="pathImages/main/main_product07.png" alt="Polo with Tipping Details" />
+                          </div>
+                          <h3 class="product-name">Polo with Tipping Details</h3>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star half"></i>
+                            </div>
+                            <span class="rating-num">4.5/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$180</span>
+                          </div>
+                        </a>
+                      </div>
+
+                      <!-- Product 4 -->
+                      <div class="product-item swiper-slide">
+                        <a href="#" class="product-link">
+                          <div class="product-visual">
+                            <img src="pathImages/main/main_product08.png" alt="Black Striped T-shirt" />
+                          </div>
+                          <h3 class="product-name">Black Striped T-shirt</h3>
+                          <div class="product-rating">
+                            <div class="stars">
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                              <i class="ico-star full"></i>
+                            </div>
+                            <span class="rating-num">5.0/5</span>
+                          </div>
+                          <div class="product-price">
+                            <span class="price-current">$120</span>
+                            <span class="price-old">$150</span>
+                            <span class="badge-discount">-30%</span>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!-- e: 관련 상품 영역 -->
+            </div>
+          </div>
+        </div>
+
+        @@include('../include/_footer.html')
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        document.addEventListener("DOMContentLoaded", () => {
+          // Quantity Stepper
+          const stepper = document.querySelector(".quantity-stepper");
+          if (stepper) {
+            const minusBtn = stepper.querySelector(".btn-minus");
+            const plusBtn = stepper.querySelector(".btn-plus");
+            const input = stepper.querySelector(".quantity-input");
+
+            minusBtn.addEventListener("click", () => {
+              const currentVal = parseInt(input.value, 10);
+              if (currentVal > 1) {
+                input.value = currentVal - 1;
+              }
+            });
+
+            plusBtn.addEventListener("click", () => {
+              const currentVal = parseInt(input.value, 10);
+              input.value = currentVal + 1;
+            });
+          }
+
+          // Color Selection
+          const colorBtns = document.querySelectorAll(".btn-color");
+          colorBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              colorBtns.forEach((b) => b.classList.remove("active"));
+              btn.classList.add("active");
+            });
+          });
+
+          // Size Selection
+          const sizeBtns = document.querySelectorAll(".btn-size");
+          sizeBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+              sizeBtns.forEach((b) => b.classList.remove("active"));
+              btn.classList.add("active");
+            });
+          });
+
+          // swiper
+        });
+      })();
+    </script>
+  </body>
+</html>

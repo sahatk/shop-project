@@ -1,12 +1,17 @@
 @use "../abstracts" as *;
 
 // 사용시 PL과 상의 할 것
-
 @media (min-width: 768px) {
   .pc-show {
     display: block;
   }
+  .pc-br {
+    display: block;
+  }
   .mo-show {
+    display: none;
+  }
+  .mo-br {
     display: none;
   }
 }
@@ -15,6 +20,12 @@
     display: block;
   }
   .pc-show {
+    display: none;
+  }
+  .mo-br {
+    display: block;
+  }
+  .pc-br {
     display: none;
   }
 }

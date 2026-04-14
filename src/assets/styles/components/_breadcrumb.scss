@@ -1,0 +1,66 @@
+@use "../abstracts" as *;
+
+/* component breadcrumb */
+.component-breadcrumb {
+  @include rem(padding, 24 0);
+
+  .breadcrumb-inner {
+    @include mobile {
+      @include rem(padding, 0);
+    }
+  }
+
+  .breadcrumb-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .breadcrumb-item {
+      display: flex;
+      align-items: center;
+
+      &:not(:last-child) {
+        &::after {
+          content: "";
+          display: inline-block;
+          @include rem(width, 16);
+          @include rem(height, 16);
+          @include rem(margin, 0 6 0 4);
+          background: url("pathImages/icon/ico_arrow_next_gray.png") no-repeat center / contain;
+        }
+      }
+
+      .breadcrumb-link {
+        @include f14;
+        color: rgba(0, 0, 0, 0.6);
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: #000;
+          text-decoration: underline;
+        }
+      }
+
+      .breadcrumb-text {
+        @include f14(500);
+        color: #000;
+      }
+    }
+  }
+
+  @include mobile {
+    @include rem(padding, 20 0);
+
+    .breadcrumb-list {
+      .breadcrumb-item {
+        &:not(:last-child) {
+          &::after {
+            @include rem(width, 14);
+            @include rem(height, 14);
+            @include rem(margin, 0 4 0 2);
+          }
+        }
+      }
+    }
+  }
+}

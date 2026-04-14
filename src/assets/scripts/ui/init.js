@@ -38,6 +38,14 @@ function initUI() {
       selector: '.component-datepicker',
       fn: etUI.components.DatepickerComp,
     },
+    {
+      selector: '.component-range-slider',
+      fn: etUI.components.RangeSlider,
+    },
+    {
+      selector: '.component-selector',
+      fn: etUI.components.Selector,
+    },
   ];
 
   mediaQueryAction((context) => {
