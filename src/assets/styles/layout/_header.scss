@@ -1,0 +1,223 @@
+@use "../abstracts" as *;
+
+.header-banner {
+  background-color: $bg-000000;
+  @include rem(padding, 9 0);
+  width: 100%;
+
+  .header-banner-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include rem(max-width, 1440);
+    margin: 0 auto;
+    position: relative;
+    @include rem(padding, 0 16);
+  }
+
+  .banner-text {
+    @include f14(400);
+    color: $font-ffffff;
+    text-align: center;
+
+    .banner-link {
+      font-weight: 500;
+      text-decoration: underline;
+      @include rem(margin-left, 4);
+    }
+
+    @include mobile {
+      @include f12;
+    }
+  }
+
+  .btn-banner-close {
+    position: absolute;
+    @include rem(right, 16);
+    top: 50%;
+    transform: translateY(-50%);
+    @include rem(width, 20);
+    @include rem(height, 20);
+    background: url("pathImages/icon/ico_close_white01.png") no-repeat center;
+    background-size: contain;
+
+    @include mobile {
+      display: none;
+    }
+  }
+}
+
+.header {
+  width: 100%;
+  background-color: $bg-ffffff;
+  @include rem(border-bottom, 1 solid rgba(0, 0, 0, 0.1));
+  position: sticky;
+  top: 0;
+  z-index: $zindex-header;
+  transition: all 0.3s ease;
+
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include rem(max-width, 1640);
+    margin: 0 auto;
+    @include rem(padding, 24 100);
+    @include rem(gap, 40);
+
+    @include mobile {
+      @include rem(padding, 20 16);
+      @include rem(gap, 16);
+      justify-content: space-between;
+    }
+  }
+
+  .left-area {
+    display: flex;
+    align-items: center;
+    @include rem(gap, 16);
+  }
+
+  // Mobile Menu Button
+  .btn-mobile-menu {
+    display: none;
+    flex-direction: column;
+    @include rem(gap, 4);
+    background: transparent;
+    @include rem(width, 24);
+
+    .hamburger-line {
+      display: block;
+      width: 100%;
+      @include rem(height, 2);
+      background-color: $font-000000;
+    }
+
+    @include mobile {
+      display: flex;
+    }
+  }
+
+  // Logo
+  .header-logo {
+    flex-shrink: 0;
+    img {
+      display: block;
+      @include rem(height, 22);
+      width: auto;
+
+      @include mobile {
+        @include rem(height, 18);
+      }
+    }
+  }
+
+  // GNB
+  .gnb-area {
+    @include mobile {
+      display: none;
+    }
+
+    .gnb-list {
+      display: flex;
+      @include rem(gap, 24);
+    }
+
+    .gnb-link {
+      @include f16(400);
+      color: $font-000000;
+      transition: opacity 0.2s;
+      display: flex;
+      align-items: center;
+      @include rem(gap, 4);
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      .ico-arrow {
+        display: block;
+        @include rem(width, 16);
+        @include rem(height, 16);
+        background: url("pathImages/icon/ico_arrow_down01.png") no-repeat center;
+        background-size: contain;
+      }
+    }
+  }
+
+  // Search Bar
+  .header-search {
+    flex-grow: 1;
+    @include rem(max-width, 577);
+
+    @include mobile {
+      display: none;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background-color: #f0f0f0;
+      @include rem(padding, 12 16);
+      @include rem(border-radius, 62);
+      @include rem(gap, 12);
+
+      .ico-search {
+        display: block;
+        @include rem(width, 24);
+        @include rem(height, 24);
+        background: url("pathImages/icon/ico_search_gray.png") no-repeat center;
+        background-size: contain;
+      }
+
+      .search-input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        @include f16(400);
+        color: $font-000000;
+
+        &::placeholder {
+          color: rgba(0, 0, 0, 0.4);
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+
+  // User Actions
+  .header-actions {
+    display: flex;
+    align-items: center;
+    @include rem(gap, 14);
+
+    .btn-action {
+      display: block;
+      @include rem(width, 24);
+      @include rem(height, 24);
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &.btn-search-mobile {
+        display: none;
+        background-image: url("pathImages/icon/ico_search_gray.png");
+        @include mobile {
+          display: block;
+        }
+      }
+
+      &.btn-cart {
+        background-image: url("pathImages/icon/ico_shop.png");
+      }
+
+      &.btn-user {
+        background-image: url("pathImages/icon/ico_profile.png");
+      }
+    }
+  }
+}

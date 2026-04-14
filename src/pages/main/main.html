@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta charset="utf-8" />
+    <title>프로젝트타이틀</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:description" content="" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link href="pathStyles/style.css" type="text/css" rel="stylesheet" />
+    <script src="pathScripts/common.ui.plugin.js" data-init></script>
+    <script src="pathScripts/common.ui.js" data-init></script>
+    <script src="pathScripts/common.js"></script>
+    <!-- 약관 템플릿 js(추후 작업예정) -->
+    <!-- <script src="pathScripts/ui/templates/privacy_policy_template.js"></script> -->
+  </head>
+
+  <body>
+    <div id="wrap">
+      @@include('../include/_header.html')
+      <main id="content">
+        <!-- s: 여기서부터 렌더링 영역 -->
+        <div class="content-wrap page-main">
+          <!-- Hero Section -->
+          <section class="main-hero">
+            <div class="hero-inner">
+              <div class="hero-content">
+                <div class="hero-text">
+                  <h2 class="hero-title">FIND CLOTHES<br />THAT MATCHES<br />YOUR STYLE</h2>
+                  <p class="hero-desc">Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.</p>
+                  <a href="#" class="btn btn-shop">Shop Now</a>
+                </div>
+
+                <div class="hero-stats">
+                  <div class="stat-item">
+                    <strong class="stat-num">200+</strong>
+                    <span class="stat-txt">International Brands</span>
+                  </div>
+                  <div class="stat-item">
+                    <strong class="stat-num">2,000+</strong>
+                    <span class="stat-txt">High-Quality Products</span>
+                  </div>
+                  <div class="stat-item">
+                    <strong class="stat-num">30,000+</strong>
+                    <span class="stat-txt">Happy Customers</span>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+          <!-- Brand Logos Section -->
+          <section class="main-brands">
+            <div class="brands-inner">
+              <ul class="brands-list">
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo01.png" alt="Versace" /></li>
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo02.png" alt="Zara" /></li>
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo03.png" alt="Gucci" /></li>
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo04.png" alt="Prada" /></li>
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo05.png" alt="Calvin Klein" /></li>
+              </ul>
+              <!-- Duplicate list for infinite scroll -->
+              <ul class="brands-list" aria-hidden="true">
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo01.png" alt="Versace" /></li>
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo02.png" alt="Zara" /></li>
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo03.png" alt="Gucci" /></li>
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo04.png" alt="Prada" /></li>
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo05.png" alt="Calvin Klein" /></li>
+              </ul>
+              <!-- Duplicate list for infinite scroll -->
+              <ul class="brands-list" aria-hidden="true">
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo01.png" alt="Versace" /></li>
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo02.png" alt="Zara" /></li>
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo03.png" alt="Gucci" /></li>
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo04.png" alt="Prada" /></li>
+                <li class="brand-item"><img src="../../assets/images/main/main_brand_logo05.png" alt="Calvin Klein" /></li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- New Arrivals Section -->
+          <section class="section-product section-new-arrivals has-border">
+            <div class="content-inner">
+              <h2 class="section-title">NEW ARRIVALS</h2>
+              <div class="new-arrivals-swiper swiper-container">
+                <ul class="product-list swiper-wrapper">
+                  <!-- Product 1 -->
+                  <li class="product-item swiper-slide">
+                    <a href="#" class="product-link">
+                      <div class="product-visual">
+                        <img src="../../assets/images/main/main_product01.png" alt="T-shirt with Tape Details" />
+                      </div>
+                      <div class="product-info">
+                        <h3 class="product-name">T-shirt with Tape Details</h3>
+                        <div class="product-rating">
+                          <div class="stars">
+                            <i class="ico-star full"></i>
+                            <i class="ico-star full"></i>
+                            <i class="ico-star full"></i>
+                            <i class="ico-star full"></i>
+                            <i class="ico-star half"></i>
+                          </div>
+                          <span class="rating-num">4.5/5</span>
+                        </div>
+                        <div class="product-price">
+                          <span class="price-current">$120</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- Product 2 -->
+                  <li class="product-item swiper-slide">
+                    <a href="#" class="product-link">
+                      <div class="product-visual">
+                        <img src="../../assets/images/main/main_product02.png" alt="Skinny Fit Jeans" />
+                      </div>
+                      <div class="product-info">
+                        <h3 class="product-name">Skinny Fit Jeans</h3>
+                        <div class="product-rating">
+                          <div class="stars">
+                            <i class="ico-star full"></i>
+                            <i class="ico-star full"></i>
+                            <i class="ico-star full"></i>
+                            <i class="ico-star half"></i>
+                            <i class="ico-star"></i>
+                          </div>
+                          <span class="rating-num">3.5/5</span>
+                        </div>
+                        <div class="product-price">
+                          <span class="price-current">$240</span>
+                          <span class="price-old">$260</span>
+                          <span class="badge-discount">-20%</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- Product 3 -->
+                  <li class="product-item swiper-slide">
+                    <a href="#" class="product-link">
+                      <div class="product-visual">
+                        <img src="../../assets/images/main/main_product03.png" alt="Checkered Shirt" />
+                      </div>
+                      <div class="product-info">
+                        <h3 class="product-name">Checkered Shirt</h3>
+                        <div class="product-rating">
+                          <div class="stars">
+                            <i class="ico-star full"></i>
+                            <i class="ico-star full"></i>
+                            <i class="ico-star full"></i>
+                            <i class="ico-star full"></i>
+                            <i class="ico-star half"></i>
+                          </div>
+                          <span class="rating-num">4.5/5</span>
+                        </div>
+                        <div class="product-price">
+                          <span class="price-current">$180</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- Product 4 -->
+                  <li class="product-item swiper-slide">
+                    <a href="#" class="product-link">
+                      <div class="product-visual">
+                        <img src="../../assets/images/main/main_product04.png" alt="Sleeve Striped T-shirt" />
+                      </div>
+                      <div class="product-info">
+                        <h3 class="product-name">Sleeve Striped T-shirt</h3>
+                        <div class="product-rating">
+                          <div class="stars">
+                            <i class="ico-star full"></i>
+                            <i class="ico-star full"></i>
+                            <i class="ico-star full"></i>
+                            <i class="ico-star full"></i>
+                            <i class="ico-star half"></i>
+                          </div>
+                          <span class="rating-num">4.5/5</span>
+                        </div>
+                        <div class="product-price">
+                          <span class="price-current">$130</span>
+                          <span class="price-old">$160</span>
+                          <span class="badge-discount">-30%</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="section-footer">
+                <a href="#" class="btn btn-outline btn-pill btn-lg btn-view-all">
+                  <span class="btn-txt">View All</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- TOP SELLING Section -->
+          <section class="section-product">
+            <div class="content-inner">
+              <h2 class="section-title">TOP SELLING</h2>
+              <div class="top-selling-swiper swiper-container">
+                <ul class="product-list swiper-wrapper">
+                <!-- Product 5 -->
+                  <li class="product-item swiper-slide">
+                  <a href="#" class="product-link">
+                    <div class="product-visual">
+                      <img src="../../assets/images/main/main_product05.png" alt="Vertical Striped Shirt" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">Vertical Striped Shirt</h3>
+                      <div class="product-rating">
+                        <div class="stars">
+                          <i class="ico-star full"></i>
+                          <i class="ico-star full"></i>
+                          <i class="ico-star full"></i>
+                          <i class="ico-star full"></i>
+                          <i class="ico-star full"></i>
+                        </div>
+                        <span class="rating-num">5.0/5</span>
+                      </div>
+                      <div class="product-price">
+                        <span class="price-current">$212</span>
+                        <span class="price-old">$232</span>
+                        <span class="badge-discount">-20%</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- Product 6 -->
+                  <li class="product-item swiper-slide">
+                  <a href="#" class="product-link">
+                    <div class="product-visual">
+                      <img src="../../assets/images/main/main_product06.png" alt="Courage Graphic T-shirt" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">Courage Graphic T-shirt</h3>
+                      <div class="product-rating">
+                        <div class="stars">
+                          <i class="ico-star full"></i>
+                          <i class="ico-star full"></i>
+                          <i class="ico-star full"></i>
+                          <i class="ico-star full"></i>
+                          <i class="ico-star"></i>
+                        </div>
+                        <span class="rating-num">4.0/5</span>
+                      </div>
+                      <div class="product-price">
+                        <span class="price-current">$145</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- Product 7 -->
+                  <li class="product-item swiper-slide">
+                  <a href="#" class="product-link">
+                    <div class="product-visual">
+                      <img src="../../assets/images/main/main_product07.png" alt="Loose Fit Bermuda Shorts" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">Loose Fit Bermuda Shorts</h3>
+                      <div class="product-rating">
+                        <div class="stars">
+                          <i class="ico-star full"></i>
+                          <i class="ico-star full"></i>
+                          <i class="ico-star full"></i>
+                          <i class="ico-star"></i>
+                          <i class="ico-star"></i>
+                        </div>
+                        <span class="rating-num">3.0/5</span>
+                      </div>
+                      <div class="product-price">
+                        <span class="price-current">$80</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <!-- Product 8 -->
+                  <li class="product-item swiper-slide">
+                  <a href="#" class="product-link">
+                    <div class="product-visual">
+                      <img src="../../assets/images/main/main_product08.png" alt="Faded Skinny Jeans" />
+                    </div>
+                    <div class="product-info">
+                      <h3 class="product-name">Faded Skinny Jeans</h3>
+                      <div class="product-rating">
+                        <div class="stars">
+                          <i class="ico-star full"></i>
+                          <i class="ico-star full"></i>
+                          <i class="ico-star full"></i>
+                          <i class="ico-star full"></i>
+                          <i class="ico-star half"></i>
+                        </div>
+                        <span class="rating-num">4.5/5</span>
+                      </div>
+                      <div class="product-price">
+                        <span class="price-current">$210</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                </ul>
+              </div>
+              <div class="section-footer">
+                <a href="#" class="btn btn-outline btn-pill btn-lg btn-view-all">
+                  <span class="btn-txt">View All</span>
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <!-- BROWSE BY DRESS STYLE Section -->
+          <section class="main-dress-style">
+            <div class="content-inner">
+              <div class="style-container">
+                <h2 class="section-title">BROWSE BY DRESS STYLE</h2>
+                <div class="style-grid">
+                  <!-- Casual -->
+                  <a href="#" class="style-item style-casual">
+                    <span class="style-name">Casual</span>
+                    <img src="../../assets/images/main/main_type_casual.png" alt="Casual" />
+                  </a>
+                  <!-- Formal -->
+                  <a href="#" class="style-item style-formal">
+                    <span class="style-name">Formal</span>
+                    <img src="../../assets/images/main/main_type_formal.png" alt="Formal" />
+                  </a>
+                  <!-- Party -->
+                  <a href="#" class="style-item style-party">
+                    <span class="style-name">Party</span>
+                    <img src="../../assets/images/main/main_type_party.png" alt="Party" />
+                  </a>
+                  <!-- Gym -->
+                  <a href="#" class="style-item style-gym">
+                    <span class="style-name">Gym</span>
+                    <img src="../../assets/images/main/main_type_gym.png" alt="Gym" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- OUR HAPPY CUSTOMERS Section -->
+          <section class="section-reviews">
+            <div class="content-inner">
+              <div class="component-swiper" data-props-loop="true" data-props-slides-per-view="auto" data-props-space-between="20" data-props-loop-slides="5">
+                <div class="section-header">
+                  <h2 class="section-title">OUR HAPPY CUSTOMERS</h2>
+                  <div class="swiper-controls">
+                    <button type="button" class="swiper-button-prev">
+                      <img src="../../assets/images/icon/ico_arrow_prev.png" alt="Previous" />
+                    </button>
+                    <button type="button" class="swiper-button-next">
+                      <img src="../../assets/images/icon/ico_arrow_next.png" alt="Next" />
+                    </button>
+                  </div>
+                </div>
+                <div class="swiper-container main-review-swiper">
+                  <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide review-card">
+                      <div class="stars">
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                      </div>
+                      <div class="reviewer-info">
+                        <span class="name">Sarah M.</span>
+                        <img src="../../assets/images/icon/ico_checking.png" alt="Verified" class="ico-check" />
+                      </div>
+                      <p class="review-text">"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."</p>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide review-card">
+                      <div class="stars">
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                      </div>
+                      <div class="reviewer-info">
+                        <span class="name">Alex K.</span>
+                        <img src="../../assets/images/icon/ico_checking.png" alt="Verified" class="ico-check" />
+                      </div>
+                      <p class="review-text">"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions."</p>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide review-card">
+                      <div class="stars">
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                      </div>
+                      <div class="reviewer-info">
+                        <span class="name">James L.</span>
+                        <img src="../../assets/images/icon/ico_checking.png" alt="Verified" class="ico-check" />
+                      </div>
+                      <p class="review-text">"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends."</p>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide review-card">
+                      <div class="stars">
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                      </div>
+                      <div class="reviewer-info">
+                        <span class="name">Michael B.</span>
+                        <img src="../../assets/images/icon/ico_checking.png" alt="Verified" class="ico-check" />
+                      </div>
+                      <p class="review-text">"The customer service is just as good as the clothes! I had a question about sizing and they got back to me right away. Shipping was fast too."</p>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide review-card">
+                      <div class="stars">
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                      </div>
+                      <div class="reviewer-info">
+                        <span class="name">Samantha D.</span>
+                        <img src="../../assets/images/icon/ico_checking.png" alt="Verified" class="ico-check" />
+                      </div>
+                      <p class="review-text">"I love how many options they have for different body types. It's so hard to find clothes that fit well elsewhere, but Shop.co makes it easy."</p>
+                    </div>
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide review-card">
+                      <div class="stars">
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                      </div>
+                      <div class="reviewer-info">
+                        <span class="name">Sarah M.</span>
+                        <img src="../../assets/images/icon/ico_checking.png" alt="Verified" class="ico-check" />
+                      </div>
+                      <p class="review-text">"I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations."</p>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide review-card">
+                      <div class="stars">
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                      </div>
+                      <div class="reviewer-info">
+                        <span class="name">Alex K.</span>
+                        <img src="../../assets/images/icon/ico_checking.png" alt="Verified" class="ico-check" />
+                      </div>
+                      <p class="review-text">"Finding clothes that align with my personal style used to be a challenge until I discovered Shop.co. The range of options they offer is truly remarkable, catering to a variety of tastes and occasions."</p>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide review-card">
+                      <div class="stars">
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                      </div>
+                      <div class="reviewer-info">
+                        <span class="name">James L.</span>
+                        <img src="../../assets/images/icon/ico_checking.png" alt="Verified" class="ico-check" />
+                      </div>
+                      <p class="review-text">"As someone who's always on the lookout for unique fashion pieces, I'm thrilled to have stumbled upon Shop.co. The selection of clothes is not only diverse but also on-point with the latest trends."</p>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide review-card">
+                      <div class="stars">
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                      </div>
+                      <div class="reviewer-info">
+                        <span class="name">Michael B.</span>
+                        <img src="../../assets/images/icon/ico_checking.png" alt="Verified" class="ico-check" />
+                      </div>
+                      <p class="review-text">"The customer service is just as good as the clothes! I had a question about sizing and they got back to me right away. Shipping was fast too."</p>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide review-card">
+                      <div class="stars">
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                        <i class="ico-star full"></i>
+                      </div>
+                      <div class="reviewer-info">
+                        <span class="name">Samantha D.</span>
+                        <img src="../../assets/images/icon/ico_checking.png" alt="Verified" class="ico-check" />
+                      </div>
+                      <p class="review-text">"I love how many options they have for different body types. It's so hard to find clothes that fit well elsewhere, but Shop.co makes it easy."</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- e: 여기서부터 렌더링 영역 -->
+      </main>
+      @@include('../include/_footer.html')
+    </div>
+
+    <!-- layer 영역 -->
+    <div id="layer-wrap"></div>
+
+    <!-- loading 영역-->
+    <div id="loading-wrap"></div>
+
+    <!-- 기타 필요한 영역 세팅 -->
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        if (typeof Swiper !== 'undefined') {
+          const reviewSwiper = new Swiper('.main-review-swiper', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            navigation: {
+              nextEl: '.section-reviews .swiper-button-next',
+              prevEl: '.section-reviews .swiper-button-prev',
+            },
+            breakpoints: {
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            },
+          });
+
+          const arrivalsSwiper = new Swiper('.new-arrivals-swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            breakpoints: {
+              1024: {
+                enabled: false,
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            },
+          });
+
+          const topSellingSwiper = new Swiper('.top-selling-swiper', {
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            breakpoints: {
+              1024: {
+                enabled: false,
+                slidesPerView: 4,
+                spaceBetween: 20,
+              },
+            },
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,699 @@
+@use "../abstracts" as *;
+
+// HERO
+.main-hero {
+  width: 100%;
+  background-color: #f2f0f1;
+  overflow: hidden;
+
+  .hero-inner {
+    display: flex;
+    justify-content: space-between;
+    @include rem(max-width, 1640);
+    margin: 0 auto;
+    @include rem(padding, 0 100);
+    position: relative;
+
+    @include mobile {
+      flex-direction: column;
+      @include rem(padding, 0);
+    }
+  }
+
+  .hero-content {
+    flex: 1;
+    @include rem(padding, 100 0);
+    z-index: 2;
+    width: 100%;
+    background: url("pathImages/main/main_visual01_pc.png") no-repeat bottom right;
+    background-size: cover;
+
+    @include mobile {
+      background-image: url("pathImages/main/main_visulal01_mo.png");
+      background-position: center bottom;
+      @include rem(background-size, 380 auto);
+      @include rem(padding, 40 0 450); // Large bottom padding to show the image below text
+    }
+  }
+
+  .hero-text {
+    @include mobile {
+      @include rem(padding, 0 16);
+    }
+    .hero-title {
+      @include f64(900);
+      color: $font-000000;
+      line-height: 1.1;
+      @include rem(margin-bottom, 32);
+
+      @include mobile {
+        @include f32(900, 1); // Reduced from 36 for better fit
+        @include rem(margin-bottom, 20);
+      }
+    }
+
+    .hero-desc {
+      @include f16(400);
+      color: rgba(0, 0, 0, 0.6);
+      line-height: 1.5;
+      @include rem(max-width, 545);
+      @include rem(margin-bottom, 48);
+
+      @include mobile {
+        @include f14(400);
+        @include rem(margin-bottom, 24);
+      }
+    }
+
+    .btn-shop {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      @include rem(width, 210);
+      @include rem(height, 52);
+      background-color: $bg-000000;
+      color: $font-ffffff;
+      @include rem(border-radius, 62);
+      @include f16(500);
+      transition: all 0.3s;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+
+      @include mobile {
+        width: 100%;
+        @include rem(height, 50);
+      }
+    }
+  }
+
+  .hero-stats {
+    display: flex;
+    @include rem(margin-top, 48);
+    @include rem(gap, 32);
+
+    @include mobile {
+      display: grid; // Use grid for stable 2x2 or similar
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      @include rem(gap, 12 30); // Reduced gap
+      @include rem(margin-top, 24);
+    }
+
+    .stat-item {
+      position: relative;
+      @include rem(padding-right, 32);
+
+      @include mobile {
+        padding-right: 0;
+        text-align: center;
+
+        &:last-child {
+          grid-column: span 2; // Last item full width
+          @include rem(margin-top, 8);
+        }
+      }
+
+      &:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 1px;
+        @include rem(height, 52);
+        background-color: rgba(0, 0, 0, 0.1);
+
+        @include mobile {
+          display: none !important; // Forced hide
+        }
+      }
+
+      .stat-num {
+        display: block;
+        @include f40(700);
+        color: $font-000000;
+
+        @include mobile {
+          @include f24(700);
+        }
+      }
+
+      .stat-txt {
+        display: block;
+        @include f16(400);
+        color: rgba(0, 0, 0, 0.6);
+        @include rem(margin-top, 8);
+
+        @include mobile {
+          @include f12(400);
+          @include rem(margin-top, 2); // Reduced from 4
+        }
+      }
+    }
+  }
+
+  .hero-visual {
+  }
+}
+
+// BRAND LOGOS
+.main-brands {
+  width: 100%;
+  background-color: $bg-000000;
+  overflow: hidden;
+
+  .brands-inner {
+    display: flex;
+    width: max-content;
+  }
+
+  .brands-list {
+    display: flex;
+    align-items: center;
+    @include rem(padding, 44 0);
+    @include rem(gap, 100);
+    @include rem(margin-right, 100);
+    flex-shrink: 0;
+    animation: infiniteScroll 20s linear infinite;
+
+    @include mobile {
+      @include rem(padding, 30 0);
+      @include rem(gap, 40);
+      @include rem(margin-right, 40);
+    }
+  }
+
+  .brand-item {
+    flex-shrink: 0;
+    img {
+      display: block;
+      @include rem(height, 32);
+      width: auto;
+      filter: brightness(0) invert(1);
+
+      @include mobile {
+        @include rem(height, 22);
+      }
+    }
+  }
+}
+
+@keyframes infiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+// PRODUCT SECTION
+.section-product {
+  @include rem(padding, 72 0 64);
+
+  + .section-product {
+    @include rem(padding, 64 0 80);
+    @include mobile {
+      @include rem(padding, 40 0 50);
+    }
+  }
+
+  @include mobile {
+    @include rem(padding, 40 0);
+    overflow: hidden;
+  }
+
+  &.has-border {
+    border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .content-inner {
+    @include rem(max-width, 1640);
+    margin: 0 auto;
+    @include rem(padding, 0 100);
+
+    @include mobile {
+      @include rem(padding, 0 16);
+    }
+  }
+
+  .section-title {
+    @include f48(900);
+    color: $font-000000;
+    text-align: center;
+    @include rem(margin-bottom, 55);
+
+    @include mobile {
+      @include f32(900);
+      @include rem(margin-bottom, 32);
+    }
+  }
+
+  .new-arrivals-swiper,
+  .top-selling-swiper {
+    @include mobile {
+      overflow: visible;
+      @include rem(margin, 0 -16);
+      @include rem(padding, 0 16);
+    }
+  }
+
+  .product-list {
+    display: flex;
+    justify-content: space-between;
+    @include rem(gap, 20);
+
+    &.swiper-wrapper {
+      flex-wrap: nowrap;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+      @include rem(gap, 0);
+    }
+  }
+
+  .product-item {
+    flex: 1;
+    min-width: 0;
+
+    &.swiper-slide {
+      @include mobile {
+        @include rem(width, 200);
+        flex: 0 0 auto;
+      }
+    }
+
+    @include mobile {
+      flex: 0 0 calc(50% - 8px);
+    }
+
+    .product-link {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+
+      &:hover {
+        .product-visual img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .product-visual {
+      width: 100%;
+      @include rem(border-radius, 20);
+      background-color: #f0eeed;
+      overflow: hidden;
+      @include rem(margin-bottom, 16);
+      aspect-ratio: 1/1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        transition: transform 0.4s ease;
+      }
+    }
+
+    .product-name {
+      @include f20(700);
+      color: $font-000000;
+      @include rem(margin-bottom, 8);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include mobile {
+        @include f16(700);
+        @include rem(margin-bottom, 4);
+      }
+    }
+
+    .product-price {
+      display: flex;
+      align-items: center;
+      @include rem(gap, 10);
+
+      .price-current {
+        @include f24(700);
+        color: $font-000000;
+
+        @include mobile {
+          @include f20(700);
+        }
+      }
+
+      .price-old {
+        @include f24(700);
+        color: rgba(0, 0, 0, 0.4);
+        text-decoration: line-through;
+
+        @include mobile {
+          @include f20(700);
+        }
+      }
+
+      .badge-discount {
+        display: inline-flex;
+        @include rem(padding, 2 14);
+        @include rem(border-radius, 62);
+        background-color: rgba(255, 51, 51, 0.1);
+        color: #ff3333;
+        @include f12(500);
+      }
+    }
+  }
+
+  .section-footer {
+    display: flex;
+    justify-content: center;
+    @include rem(margin-top, 40);
+
+    @include mobile {
+      @include rem(margin-top, 24);
+    }
+
+    .btn-view-all {
+      @include rem(min-width, 218);
+      margin: 0 auto;
+      justify-content: center;
+      @include mobile {
+        width: 100%;
+        @include rem(min-height, 46);
+      }
+    }
+  }
+}
+
+// TOP SELLING
+.product-rating {
+  display: flex;
+  align-items: center;
+  @include rem(gap, 13);
+  @include rem(margin-bottom, 8);
+
+  @include mobile {
+    @include rem(gap, 11);
+  }
+
+  .stars {
+    display: flex;
+    @include rem(gap, 5);
+
+    .ico-star {
+      display: block;
+      @include rem(width, 18);
+      @include rem(height, 18);
+      background-color: #f0eeed; // Default empty
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+      &.full {
+        background-color: #ffc633;
+      }
+
+      &.half {
+        background: linear-gradient(90deg, #ffc633 50%, #f0eeed 50%);
+      }
+
+      @include mobile {
+        @include rem(width, 15);
+        @include rem(height, 15);
+      }
+    }
+  }
+
+  .rating-num {
+    @include f14(400);
+    color: rgba(0, 0, 0, 0.6);
+
+    @include mobile {
+      @include f12(400);
+    }
+  }
+}
+
+// BROWSE BY DRESS STYLE
+.main-dress-style {
+  @include rem(padding, 0 0 80);
+
+  @include mobile {
+    @include rem(padding, 0 0 50);
+  }
+
+  .content-inner {
+    @include rem(max-width, 1640);
+    margin: 0 auto;
+    @include rem(padding, 0 100);
+
+    @include mobile {
+      @include rem(padding, 0 16);
+    }
+  }
+
+  .style-container {
+    background-color: #f0f0f0;
+    @include rem(border-radius, 40);
+    @include rem(padding, 70 64);
+
+    @include mobile {
+      @include rem(border-radius, 20);
+      @include rem(padding, 40 24);
+    }
+  }
+
+  .section-title {
+    text-align: center;
+    @include rem(margin-bottom, 64);
+    @include rem(font-size, 48);
+    font-weight: 900;
+
+    @include mobile {
+      @include rem(margin-bottom, 28);
+      @include rem(font-size, 32);
+    }
+  }
+
+  .style-grid {
+    display: flex;
+    flex-wrap: wrap;
+    @include rem(gap, 20);
+
+    @include mobile {
+      @include rem(gap, 16);
+    }
+  }
+
+  .style-item {
+    position: relative;
+    @include rem(height, 289);
+    @include rem(border-radius, 20);
+    background-color: #ffffff;
+    overflow: hidden;
+
+    @include mobile {
+      @include rem(height, 190);
+      flex: 0 0 100% !important;
+    }
+
+    &.style-casual,
+    &.style-gym {
+      flex: 1 0 calc(37% - 14px); // Adjusting for gap
+    }
+
+    &.style-formal,
+    &.style-party {
+      flex: 1 0 calc(63% - 14px); // Adjusting for gap
+    }
+
+    .style-name {
+      position: absolute;
+      @include rem(top, 25);
+      @include rem(left, 36);
+      @include rem(font-size, 36);
+      font-weight: 700;
+      z-index: 10;
+
+      @include mobile {
+        @include rem(top, 16);
+        @include rem(left, 24);
+        @include rem(font-size, 24);
+      }
+    }
+
+    img {
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      transform-origin: right center;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.section-reviews {
+  @include rem(padding, 80 0);
+  overflow: hidden;
+
+  @include mobile {
+    @include rem(padding, 50 16);
+  }
+
+  .content-inner {
+    @include rem(max-width, 1640);
+    margin: 0 auto;
+    @include rem(padding, 0 100);
+
+    @include mobile {
+      @include rem(padding, 0);
+    }
+  }
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    @include rem(margin-bottom, 40);
+
+    @include mobile {
+      @include rem(margin-bottom, 24);
+    }
+  }
+
+  .section-title {
+    @include rem(font-size, 48);
+    font-weight: 900;
+    line-height: 1.1;
+
+    @include mobile {
+      @include rem(font-size, 32);
+    }
+  }
+
+  .swiper-controls {
+    display: flex;
+    @include rem(gap, 16);
+    @include rem(padding-bottom, 5);
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      position: static; // Override default absolute positioning from swiper-bundle.min.css
+      @include rem(width, 24);
+      @include rem(height, 24);
+      margin: 0; // Remove swiper default margins
+      border: 0;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s;
+
+      &::after {
+        display: none !important; // Remove default swiper arrow icons
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+    }
+  }
+
+  .component-swiper {
+    position: relative;
+    width: 100%;
+
+    .swiper-container {
+      overflow: visible;
+    }
+  }
+
+  .review-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    @include rem(border-radius, 20);
+    @include rem(padding, 28 32);
+    height: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+    @include mobile {
+      @include rem(padding, 24);
+    }
+
+    .stars {
+      display: flex;
+      @include rem(gap, 6);
+      @include rem(margin-bottom, 15);
+
+      .ico-star {
+        display: block;
+        @include rem(width, 22);
+        @include rem(height, 22);
+        background-color: #ffc633;
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+        @include mobile {
+          @include rem(width, 19);
+          @include rem(height, 19);
+        }
+      }
+    }
+
+    .reviewer-info {
+      display: flex;
+      align-items: center;
+      @include rem(gap, 4);
+      @include rem(margin-bottom, 12);
+
+      .name {
+        @include rem(font-size, 20);
+        font-weight: 700;
+        @include mobile {
+          @include rem(font-size, 16);
+        }
+      }
+
+      .ico-check {
+        @include rem(width, 24);
+        @include rem(height, 24);
+        @include mobile {
+          @include rem(width, 19);
+          @include rem(height, 19);
+        }
+      }
+    }
+
+    .review-text {
+      @include rem(font-size, 16);
+      line-height: 1.4;
+      color: rgba(0, 0, 0, 0.6);
+      @include mobile {
+        @include f14(400);
+        @include rem(font-size, 14);
+      }
+    }
+  }
+}
